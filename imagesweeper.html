@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script type="text/javascript" src="javascript/game.js"></script>
+  <title>ImageSweeper</title>
+</head>
+
+<body>
+<h4>GamePad</h4>
+<div class="gamebackground">
+   <button type="button" class="gamebuttonheader">0</button><!--
+--><button type="button" class="gamebuttonheader">1</button><!--
+--><button type="button" class="gamebuttonheader">2</button><!--
+--><button type="button" class="gamebuttonheader">3</button><!--
+--><button type="button" class="gamebuttonheader">4</button><!--
+--><button type="button" class="gamebuttonheader">5</button><!--
+--><button type="button" class="gamebuttonheader">6</button><!--
+--><button type="button" class="gamebuttonheader">7</button><!--
+--><button type="button" class="gamebuttonheader">8</button><!--
+--><button type="button" class="gamebuttonheader">9</button><!--
+--><button type="button" class="gamebuttonheader">10</button><!--
+--><button type="button" class="gamebuttonheader">11</button><!--
+--><button type="button" class="gamebuttonheader">12</button><!--
+--><button type="button" class="gamebuttonheader">13</button><!--
+--><button type="button" class="gamebuttonheader">14</button><!--
+--><button type="button" class="gamebuttonheader">15</button><!--
+--><button type="button" class="gamebuttonheader">16</button><!--
+--><button type="button" class="gamebuttonheader">17</button><!--
+--><button type="button" class="gamebuttonheader">18</button><!--
+--><button type="button" class="gamebuttonheader">19</button><!--
+--><button type="button" class="gamebuttonheader">20</button><!--
+--><button type="button" class="gamebuttonheader">21</button><!--
+--><button type="button" class="gamebuttonheader">22</button><!--
+--><button type="button" class="gamebuttonheader">23</button><!--
+--><button type="button" class="gamebuttonheader">24</button><!--
+--><button type="button" class="gamebuttonheader">25</button><!--
+--><button type="button" class="gamebuttonheader">26</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">A</button><!--
+--><button type="button" id="MHcvU3LLse" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RAyZ9efDeF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BKrNt5cNnT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fg4L4NCtWp" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xNYfsk4mMH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jAiZiThtxT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ppadbl3PQF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5lMwJLUjSe" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rTdx52ENF4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5NNedUsR2J" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UkfcVBmqqV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MXQgxJADXX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qMQaJdPkCO" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RCui6qrFJV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HFCxKMvwYw" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YeQxdTHE1N" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a7WIaHbSyy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AkWbPQuXhf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MYZC9GqJ5W" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6kzOuC9io4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TVdrILiBRE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a2nah2ZTfQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NjgKucCGkx" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rXF2MflLZM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="JPJeu2PKGO" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sRCeNTc6fI" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">B</button><!--
+--><button type="button" id="2TLp2jJcXt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GHidcIuFNE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2YcMENmRch" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="byEObvxT6F" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qEj29d92e5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="L2ROWr2JdD" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="PL4euuRVIB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="QEoKDw2gXS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="zz4PAi3l4I" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="aPRtKZNW22" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rDyVVOBg25" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="SKAV95g2eV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="VrKe2gLHFh" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="pdzS5QasW9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XQ5A9bVRAL" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xXtaATAn8o" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xCT1BfiHvv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GAAlvIt2u2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="l9Dg3sdjP3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="KPZCyfRgxV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="c5IhB3a2Jm" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rjLIzvtwsd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5YvuNldweV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="lUCkFhq2u6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bCytPkgNWl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CAzA2c9f2O" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">C</button><!--
+--><button type="button" id="L4gzYTWXpW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="COInVs5Ga2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uYkiwAVHiW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uSykDkT75q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BX2iq8iQil" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Umu6GvW2ZK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9jwr3alYdl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="DKRoajn4RN" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IEjSYOa5th" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9dTOkeBM25" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UHDuUqhnLU" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AvtlLELxIl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="E2yC55SgEM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6tv9FdsIFg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5EbwufnHnw" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IV1hGFOHKW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ykR7Agzr95" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2jDCwtJBS2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MBu2kwW2YW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2d95lsy2sR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="z2doSNgnCF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="24YoUx2HPI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="z2gaaaCjDZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5SJx2cuHdM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YcWEL52eyI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MjKvQDEoKR" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">D</button><!--
+--><button type="button" id="p6I2wD5yA5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="R22e4puqWX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jBXbnrOv5H" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vVe1JldOUL" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="wNPJ7FJ5PS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="LvXmRK2SQY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="yVYOvlm9ed" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vL99aaWcRp" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="f2liClesiY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="o22bmnnj5h" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vi53jZkIXu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9mJNHsPwUm" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="mgfJMdCJ25" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="h9BL59JXms" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="zO22hjrNJL" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tSMS9Qroor" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XPHSWnZBga" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5QRxnlhWek" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ouaCZn2vFC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HNLMNNoF4V" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9rOvIFyOQ9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xl222S3tzM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BxpXV9UJkP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="62yVtgXKyt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="yCLLncKn4f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="hlfPDafq9G" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">E</button><!--
+--><button type="button" id="2E2O0vVdgt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MpPy0tGef9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gsqK0wyj5e" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ylTw0WgLIg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2OQA0MagWT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UZwG0cwM2k" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bK6B0COkum" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="coDe0D9cNH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="pnak0w3Qbq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jHf60Pxqc9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fvtr0DLtHm" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="z4X50ZWfhW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Lj3M0tNmHn" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6xsp0tWdOK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="iGYn0g9lbt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="djZi0kA9Qy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5yoF0ZEog9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="eURY0uoQ6D" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Jx6R0v2rBS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6bh20f35eG" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9P5B0ghQaI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="E2ZF0Ktel5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NAdv0In8er" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rd210XiXNz" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="EkSc0bIJpQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HhWw0VQQaL" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">F</button><!--
+--><button type="button" id="xUG22vR2n6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="At22vUzBTI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="aI52kut25i" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XdN2fww2tZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tpc2o26Fbj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ss229ONlAW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2Am25n5mNM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="I3W2Ds9kis" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9262POSzKs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="k5u2Qjm4rX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="M9t26U9IFk" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="z3223Jm2KT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CJa2DrJmdI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Pyw2JO3ZMP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9px2WfeZvF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9q22LTMp2F" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RQ92PHVlZs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TrK29PiM6C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rtF2ERB2t9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3l52gGAjZo" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="cnV2XOuOj9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sgr2BMu2nK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Sya7OGYPg5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rYl86fPTcb" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2Hf2Jdwz2q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qep2exRgO9" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">G</button><!--
+--><button type="button" id="FdJE5o4IsH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="h3IJHY42hv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="62TfuZ4xsK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uKzK5s4oWr" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5HEeeG4PEB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="shrw9D4S33" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s6KoKB4EZ9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="4YCqkb8vkx" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="wT2R7d46bc" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="KHkQYs4yPu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="PRI2rd4Tig" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fg5pzZ49gK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sG5Mzq4awC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rdb2Vc425q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dHVDwK4c2X" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tH6Vey43Gc" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2uQeHw4Y2p" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Z6suQx43U2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CcIvEn4uMG" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vbqLCP4n5M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="wx9I324ldW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AZGzzR4kxs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HWEdyC4QyJ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="x9qiFx4P6K" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="WmDqX24rp4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Eg3zGz4I5X" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">H</button><!--
+--><button type="button" id="Mimq5Jd29Y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="q9rnJxcC9n" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vr5CCH9692" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="lncO55Rp92" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="OntK4Dez9C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="OwjIfbrf9j" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="35jhLml69g" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ViMvMA1m9D" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ZYRMh7K39O" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IDizNMeF9D" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6HQOIW5p93" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="J55Ttl4E9q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ubmnmwG29H" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="eddqpCbc9J" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="b2zMmTc29D" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="c9Ji9H2A9u" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="B2x2N8Ws9T" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rERhnatB9f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Vz2dZere9N" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="B9x2wBtM9y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IST9Sh4t9b" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="4korrmKp9u" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GIdHFXZd9f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="VerroZG29B" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="FQmxu96K9C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2Wzm2rw29e" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">I</button><!--
+--><button type="button" id="Fz36isCqNR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Zn56uzqnUM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RXF6pLdmmq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5W26l2fA4J" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="VhS655un9c" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="p9n6aAK2Ok" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qAz62V45Ea" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Esp6mWVGs5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="df26sGurQx" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Mo26ZnKjU5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3yn6VYrDFd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5sM6syh6n4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3p26KA92zO" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="reT6SZVv9h" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="N2G6PnDLow" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3oT6NSG4E3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9s369WHgIy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="DJ26IPgbVg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Q2P62vJrhp" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xpu6wUw2j3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uV26E22hOt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ink65uiaQg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Tee695cTvD" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ZtL6mpG49i" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="aCk6H9if5v" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="hNl63N9aRI" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">J</button><!--
+--><button type="button" id="9adVT3U2iz" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2WuHK3rUz9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xJWok39495" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="kQgYk3vaMZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Wil4o3Rsfv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AxDsg3AqHG" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="LdnYL3L52l" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MK52R3tCUM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bDuWt35Nmz" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="URSot3uA5A" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gFtoe332Ye" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="H6KQH3dQzU" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="stLvI3kxGa" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MQ9Kx3ezcH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ut9aP3K2HZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="g6aQ932dnZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gkfqd3afOe" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="nhnXB3KJkg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vtthS3ZkR6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="j3nAo3yW2X" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="oMZwu3cKci" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fp1Ym3LTxs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dfOVw3AM8u" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XfHRW3ibI9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CdvZH3RGp6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YR4jh3D594" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">K</button><!--
+--><button type="button" id="29Nds25U34" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="69YN2RTTg5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="N94K6us5aq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="29LvXVO6vL" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="M9SfIYs2nX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a9XRD6y2l2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="M99ok2vnEM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="m9jlvs5U59" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s9O9ntk66v" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Z96HT6TkUz" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="m95q4H6heM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Y9UQIVeUY9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="S92oy9Ui4D" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="299zLx2MBc" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Q9cRCsbCv6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Y96UQZtqy2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="r9qOqhpm2u" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="m9QLdCsQD2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="D9Ok2DDPw3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="S9xXkblyNY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="f9vSBbqNMV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="k9WJZWZwc7" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="69Pkqq1aOj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="h93NKIZ2II" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="X9N2RBqu5f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="o9ZRYdVLOM" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">L</button><!--
+--><button type="button" id="A43g2yTizJ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xJB92BN9rM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="aX2o2mu8SD" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9dl52toh1M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="99Ja2523fF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s2iO2HaGlK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="oPjV2U9Zby" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="wMam2wgq5n" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="n5wR2nEghE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5d2N2uzwZP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bu2B2Xg2QR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CyGN2EhMtw" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="PpMp2wA2Fl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2Zdh22U3zu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="X26e2Er6Vt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="kuS22oc3GE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="q6xF2FRcSn" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="JHAH2Pdvd9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jMmx2td4Mi" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="WcyK25MJuv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IYc22kK9tG" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tJZr2U1IjQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qz7E2ptifd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2rTy2jVsTY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Dwg62xu55Z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gLaD2tpZes" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">M</button><!--
+--><button type="button" id="4FANMh59bM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="EbM32c54FW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="J1BllY5VGs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RuY5xq5i8X" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jnx5OY5J2M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HjXBnc5dhq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="n3Ge4r5EvD" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NHsxDO5WrV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="n5bXd55NgC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="x39tzL5y2H" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YYRnt25M6Z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2nCe3O5dm3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ecnia2595l" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vk2OdA5wzv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="lS9JXa5Avt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="U2RP9G5jIA" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="mYuZwT5FyV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rZdJNH5uFK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Jkjxoi5TaH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2E6IFE5z24" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="EuQZ9m59u9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="nBUZ2y5fCC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Cp6tP55qaB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xAgsYn52M5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Lb5H2D5rsj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ZuFp2k5KP6" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">N</button><!--
+--><button type="button" id="MeJ3h25Fz3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a493l9jwHR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="QJb3c4snBY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6zW3Z9fCZv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qcw3p2eOWq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2343Q6HWWh" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MT33kVvO2k" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5Hn3CMr9sE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Y993AmChTb" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="A9N3tsTWJf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sc93qggK2M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ISs3c3lu9F" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="aw23ZqXvar" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UVT3KUf9Po" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Bgd33URFyW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="64F3mCnN6y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="E2D3c2U5to" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="r2x3B5TLEV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TH43fmhNhU" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dXK3QzntFe" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5X935ww29H" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Wz232FBngS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ub23Rb5OtV" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="zq9333JLCK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="mvt3lVWw4V" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="U5x3pP4BgN" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">O</button><!--
+--><button type="button" id="TqTHEoHP4V" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2xV5xH2q4Q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qxyhdRcl4N" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5f3zqjCp4V" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NVBQ53mX4Z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="m2FNVTB44L" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Jymhx93r4v" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5XPoKhp34Y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jSyRyU5i4w" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="fKg2gh2J4Q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="boj5Kmvt4T" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="pGC8np5L42" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="nwcA21pF4R" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a7Gl63p24Q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xscLFavt4B" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BX6joqPU4K" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="LL6FIktR4r" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="QHXKsQXo4h" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="voS34jV24N" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BD9w2F5z4k" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="L3hbXg6B4Q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vp3Bu5hS4P" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="fdfZ35ZP4P" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2NzwmNUe4I" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="auhUlrcO4I" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ey5yvwFL4w" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">P</button><!--
+--><button type="button" id="5262QMgJMR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tL6pVNp2p3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uW6hvlJYTS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5q6v45qXLt" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="LW6Zees2rh" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ln6rntePsf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jX6iqgwu2m" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="OO6cz2BBCh" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="4P6VECmhU9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CV64lcmpl2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dF6nmd9Nok" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="c96F1oiBd9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6V6F97xOn2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AZ68dvc5ZB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Dj6aqda3Lf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="6g6iVK422K" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="F96kW3dXsf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vT6kcFcclu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vV6ZgCJUsE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ad6s9aw9YM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bv6OFV9292" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="626xoXpy9f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="hS6obgAIEX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Mc6L5Kwlsy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2I6GuI29Xe" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3C65TQehHC" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">Q</button><!--
+--><button type="button" id="SBd590F9vR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GoQsg092iN" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sHriE0Pize" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="pOrQb0LSUn" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bNm5U0t36I" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="KLuAI0lVo2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="eZs650hrHT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="USKHN0SYMd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ueSCJ0iCUK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="u5D9w06BGG" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ghoDv0c2we" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NS12H0vWgX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="WWx2R0Hxa8" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="PW7G30Yn3M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="22ALB0XjIS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="b5ZyZ06atd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="atqDP0nics" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="OF9550I6Ze" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="WpeJW02ggA" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ophkI0x9NM" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bhqwA0uodl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qRX5b04uoS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="hwfN60htYa" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="H2tkY0ol3q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="fGJBj0PJia" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="pvTTo02DkC" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">R</button><!--
+--><button type="button" id="pJbmktE222" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="QGZaK4BF2P" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="WV2rDnH62t" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="r3QOXMNo23" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Td5Nq4ts2q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="U6LyGudx2t" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UvmS43z225" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9Nawvcue22" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="NPbYYs6K2y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="kqY4emzm2f" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bAsKZ2H22J" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gX2cS23A2Z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="V65cop5i2x" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="x226jFOF2l" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="C3yGJKG52k" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="DX2xmCrK2l" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="eZz4C2Oe2o" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xptxeK2I2W" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="FSt9fqDN2c" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="VQ4MZHMg2P" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="lldKoXAa23" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="eAcg5xNo29" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="45hqx6v32d" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="o2LJDodN22" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XzCoTAU222" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="f9iF2E2m2u" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">S</button><!--
+--><button type="button" id="P0JNYJe1TD" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s0AdyERPrR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="K0c2ecoZX5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="20L9xShDJu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="h0IEW5PjoW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="W05JqOtEx4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="R0Xe6JWusC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="N0nE2O2EmS" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="V0LE5Fmjsb" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Z0QYkUa2Mm" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="y03tV6mWKN" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="j0n5GKqyXs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="20lA4JSu5M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="o0Rz24yEgd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="B0Rw4RpRQg" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="60ffgSP5OE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="50ZGyUg9W6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="b0iYcHC4XH" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="309FRp28YB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="w0whu273mY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="K03ZGUkTiQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="n0JBCvr2oB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="j02N22249k" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="G0L95iLRoC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="w04wZro9Fc" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="P0Kepj6dIj" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">T</button><!--
+--><button type="button" id="qx22sJoGZ2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="p222QC2tsi" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="QM22pzgAcK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="K622uctR9z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s222KWHrKY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Js225WOmDv" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2U225ZvsN5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Aj222CoI5m" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="JY22Z42XN6" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sX22kRMkGW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9P22XCnfVb" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="j522e2I2rZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XS22XkH9bC" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qg22k2xLwT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HN22NI3H53" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AO22gzEqsT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="LD22u9RPgF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="od22pRl4mi" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="mK22Pjs7aI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Lj224F28lE" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Pi226ROyjl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vy22SB5Nfu" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9R22Bcm9EZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="kN22d3cYW5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vM22mP5TB2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="MM226hpoih" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">U</button><!--
+--><button type="button" id="g5Za643HDZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="oCrJe4gtaY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a2tmH4xz9o" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="y4e4Q42XsF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5OKEh44H3z" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="bsJJ34kLHY" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XfBLd49i5M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3QrGe4FhyZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vgrkj4CsZ9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="yHLSe4AGIU" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5em9l4fVTs" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2FyKU4JVSl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="u92tH492uX" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ao9Gn44C2w" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="95hJG4bpl4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="v3TpO4P49b" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rfEMU4kzKp" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YbhFt4QHjj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="IjXlj49ooo" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="iiyGh45JeI" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="3vjaz42Lfl" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RHfwC4GS2y" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sXOvi4sQXj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2QuGL49uzf" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="S2ret4eRMd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rBVc449LO6" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">V</button><!--
+--><button type="button" id="Q2KvA6x99S" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="z65HgbU99C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2vvnqjA99l" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="VJcUiaC99G" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9igwg3Q99o" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="udTnUZ499T" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uSf9ZFm99e" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GCeEvEH99g" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ZRB2z9v99j" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="B96ZDYH99L" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GV5B29A99B" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Gxi5bQ699C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="lds2CCC99G" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="SbMO9jQ99Q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ctPBz9v99G" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2VVsqb999L" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="YckjkTM992" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sWlMD2k99L" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ezciAhy99M" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jQRrCgP99E" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tiOFPLO99v" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5Oq9xnw99C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uD2v9s999F" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vK9Ga2Z99U" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dsqEyJ299C" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UJTIFZR99I" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">W</button><!--
+--><button type="button" id="d2hjdQg3n0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="F6F3MCBrJ0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="oNEAOalBp0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="nnhifHpJp0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="sUCWB6JoR0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="W8vfgbA2r0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Jt9AI91520" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9gObWcaTS0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xb2IOup420" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="h3Tpa9iGy0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="FB29JzACt0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="n5qzVHSCa0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="693JxWUpu0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="EtwQosado0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="GQNEsXVdJ0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5weuAZ3hp0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="KHgNRl2RB0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TmgFrXT9x0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9fJF5m56G0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="v25kGp3fv0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="DuiTVNmUB0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="tdOXkorWq0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CCjtl5oE50" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="OHW2i2IY30" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="35aqj2WBt0" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9nmFIuJNj0" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">X</button><!--
+--><button type="button" id="Kj35pBe6vP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="SB3kdre6uK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="a43mUvW6w4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2f3Fhr96Do" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="vi3SKVD6ZA" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ap31TVE6oZ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ns37A2W6DK" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uu33vfO6DQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="uo3i22x69E" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gH35Cef6dW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="cz35tW96sB" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="5p3dGmN6TR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TV3vFit65L" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Lz3GKNi6vr" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="FK3Fydd6qy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="as3qcNo6Ki" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="xX3xl2z6gT" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Z63Emyz6HJ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Ty3gjkJ6Qy" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HT372qV6uq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="cz38Qa46BJ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ej30POm6Y5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Q536mVX6zQ" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Wv3SwLc6tR" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="dM3FcNV6cP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="UC3vSf269l" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">Y</button><!--
+--><button type="button" id="4Y0Ur2k39p" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="460D5n635E" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="M50GEEl3Au" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Xi0iKMz3Xq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Vb0X25R3Ri" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="220gfCU3W2" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="XP0OVas3g5" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Yy0mV9I3Jj" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="y30YsXE3ct" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="rP0XdAd3DW" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Tr0RpCi32q" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fk0AD9L3z4" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Cm02LPy3qq" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BF0xLCf32w" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Fz0QzVV3sh" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9i0BDje35t" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="4d0SQQP3ZF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="qT0XAqb3Rd" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="yJ0uneg3DP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Tt0rc1E3r9" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="RT0Xd8X3aO" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="s209sxE3lP" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="cz0kjAa3oF" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="CB0ZcxL3D3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Hz0eHuR3y3" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ds0Iuc53jW" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+
+--><button type="button" class="gamebuttonrowind">Z</button><!--
+--><button type="button" id="pWbViJyh62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="wrlLyS5E62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="AO9wgIzS62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="ZG6BJNTT62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="M2kK5VOY62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="an5LZvmC62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="biQkiJFO62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="U3BltZG562" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="J2AUIMyX62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="mZk3LYPa62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="hCo5t9aQ62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="k3NfMiCV62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="9625JKtu62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="TCXHWwCA62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gHjUTkan62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="J9mMh5WL62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="4obBcxfA62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="65pztDbP62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="gELbSgvT62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="HECjIhIq62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="jwuzj2MF62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="t4AtMPTa62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="2PwbssYW62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="cBxQ2gLF62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="BdEXsACf62" class="gamebutton" onclick="action(this.id)">.<!--
+--><button type="button" id="Oeu2FO9S62" class="gamebutton" onclick="action(this.id)">.</button><br/><!--
+</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

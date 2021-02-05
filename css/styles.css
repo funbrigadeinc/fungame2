@@ -1,0 +1,72 @@
+/*
+Panda -- Zebra / Lion / Tiger
+Ownl -- Peacock / Parrot.
+Cup Cake -- Chocolate / CAndy
+Pine Apple -- Orange / Pineapple
+Basket ball -- Cricket Bat / Foot Ball / Basket Ball
+Charminar -- Charminar / Eifel towr.
+Rose FLower -- Tomato
+Wonder woman -- Spiderman / Iron man.
+Orange Car -- car - yellow car
+Sports bike - Green bike
+Headphones
+Cone Ice Cream / Chocobar.
+*/
+body{
+  padding: 20px;
+}
+
+.homepagebody{
+  background-image: url(../images/MainPageWall.png);
+  width: 1280px;
+  height: 768px;
+}
+
+.gamebackground{
+  background-image: url(../images/GameBackGround.png);
+  height: 1215px;
+  width: 1215px;
+  margin: 0px 0px 0px 0px;
+}
+
+/* Button width + padding + border: 50 + 6+6 + 5+5 = */
+.gamebuttonheader {
+  height: 45px;
+  width: 45px;
+  border-width: 5px;
+  margin: 0px 0px 0px 0px;
+  border-color: gray;
+  overflow: hidden;
+  outline: none;
+  white-space: nowrap;
+}
+
+.gamebuttonrowind {
+  height: 45px;
+  width: 45px;
+  border-width: 5px;
+  margin: 0px 0px 0px 0px;
+  border-color: gray;
+  overflow: hidden;
+  outline: none;
+  white-space: nowrap;
+}
+
+.gamebutton {
+  height: 45px;
+  width: 45px;
+  border-width: 5px;
+  margin: 0px 0px 0px 0px;
+  border-color: gray;
+  text-indent: -9999px;
+}
+
+.gamebuttontrans {
+  height: 45px;
+  width: 45px;
+  border-width: 5px;
+  margin: 0px 0px 0px 0px;
+  border-color: Transparent;
+  background-color: Transparent;
+  text-indent: -9999px;
+}
