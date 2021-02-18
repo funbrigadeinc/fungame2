@@ -27,7 +27,7 @@ function action(clicked_id){
   var array_name25 = ["4Y0Ur2k39p","460D5n635E","M50GEEl3Au","Xi0iKMz3Xq","Vb0X25R3Ri","220gfCU3W2","XP0OVas3g5","Yy0mV9I3Jj","y30YsXE3ct","rP0XdAd3DW","Tr0RpCi32q","Fk0AD9L3z4","Cm02LPy3qq","BF0xLCf32w","Fz0QzVV3sh","9i0BDje35t","4d0SQQP3ZF","qT0XAqb3Rd","yJ0uneg3DP","s209sxE3lP","cz0kjAa3oF","CB0ZcxL3D3","Hz0eHuR3y3","ds0Iuc53jW"];
   var array_name26 = ["pWbViJyh62","wrlLyS5E62","AO9wgIzS62","ZG6BJNTT62","M2kK5VOY62","an5LZvmC62","biQkiJFO62","U3BltZG562","J2AUIMyX62","mZk3LYPa62","hCo5t9aQ62","k3NfMiCV62","9625JKtu62","TCXHWwCA62","gHjUTkan62","J9mMh5WL62","4obBcxfA62","65pztDbP62","gELbSgvT62","HECjIhIq62","jwuzj2MF62","t4AtMPTa62","2PwbssYW62","cBxQ2gLF62","BdEXsACf62","Oeu2FO9S62"];
 
-  if(array_name1.includes(clicked_id)){
+  /*if(array_name1.includes(clicked_id)){
       reset(clicked_id);
   } else if(array_name2.includes(clicked_id)){
       reset(clicked_id);
@@ -37,7 +37,7 @@ function action(clicked_id){
       reset(clicked_id);
   } else if(array_name5.includes(clicked_id)){
       reset(clicked_id);
-  } else if(array_name6.includes(clicked_id)){
+  } else*/ if(array_name6.includes(clicked_id)){
       reset(clicked_id);
   } else if(array_name7.includes(clicked_id)){
       reset(clicked_id);
